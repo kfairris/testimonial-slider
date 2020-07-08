@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/style.css" class="css">
+  <!-- tiny slider - https://github.com/ganlanyuan/tiny-slider -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero__slider">
+      <div class="hero__item">
+        <div class="hero__innerwrap">
+          <div class="hero__textcol">
+            <div class="hero__quote">“ I’ve been interested in coding for a while but never taken the jump, until now.
+              I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+              excited about the future. ”
+            </div>
+            <div class="hero__name">Tanya Sinclair <span class="hero__profession">UX Engineer</span></div>
+
+          </div>
+          <div class="hero__image-container">
+            <div class="hero__image">
+
+              <img src="/images/image-tanya.jpg" alt="Tanya Sinclair"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__item">
+        <div class="hero__innerwrap">
+          <div class="hero__textcol">
+            <div class="hero__quote">“ If you want to lay the best foundation possible I’d recommend taking this course.
+              The depth the instructors go into is incredible. I now feel so confident about
+              starting up as a professional developer. ”</div>
+            <div class="hero__name">John Tarkpor <span class="hero__profession">Junior Front-end Developer</span>
+            </div>
+          </div>
+          <div class="hero__image-container">
+            <div class="hero__image">
+              <img src="/images/image-john.jpg" alt="John Tarkpor"></div>
+          </div>
+        </div>
+      </div>
+      <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+        <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+          <i class="fas fa-angle-left fa-5x"></i>
+        </li>
+        <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+          <i class="fas fa-angle-right fa-5x"></i>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://kennyfairris.dev" target="_blank">Kenny Fairris</a>.
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="custom.js"></script>
+</body>
+
+</html>
