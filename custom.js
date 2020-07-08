@@ -11,8 +11,8 @@ let slider = tns({
     // fixedWidth: 1440,
     controls: true,
     controlsContainer: '#customize-controls',
-    nav: false,
-    // navPosition: 'bottom',
+    nav: true,
+    navPosition: 'bottom',
     // swipeAngle: false,
     speed: 400,
     // viewportMax:1440
