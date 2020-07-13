@@ -18,6 +18,7 @@ img {
     width: 100%;
     padding: 0;
     margin: 25px auto;
+    position: relative;
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -89,6 +90,31 @@ img {
     &__nav{
         z-index: 20px;
         background-color: #ff0000;
+    }
+}
+#customize-controls {
+    list-style-type: none;
+    position: absolute;
+    bottom: 14px;
+    right: 316px;
+    display:flex;
+    li {
+        color: var(--grayish-blue);
+        font-size: 0.4rem;
+        background-color: #fff;
+        
+    }
+    li.prev{
+        padding-right:10px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        padding-left: 5px;
+    }
+    li.next{
+        padding-left:10px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding-right: 5px;
     }
 }
 
