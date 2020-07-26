@@ -1,5 +1,9 @@
 # Frontend Mentor - Coding Bootcamp Testimonials Slider
 
+See my solution at [https://kfairris.github.io/testimonial-slider](https://kfairris.github.io/testimonial-slider)
+
+I used the tiny-slider found at [https://github.com/ganlanyuan/tiny-slider](https://github.com/ganlanyuan/tiny-slider)
+
 ![Design preview for the Coding Bootcamp Testimonials Slider coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
