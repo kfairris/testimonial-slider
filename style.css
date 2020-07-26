@@ -18,13 +18,17 @@ img {
 .hero {
   height: 100%;
   width: 100%;
+  max-width: 1440px;
   padding: 0;
   margin: 25px auto;
   position: relative;
 }
 
+.hero__slider {
+  overflow: hidden;
+}
+
 .hero__item {
-  height: 35rem;
   color: var(--dark-blue);
 }
 
@@ -38,21 +42,12 @@ img {
           flex-direction: row;
   padding: 25px 50px;
   max-width: 1440px;
-  height: 800px;
+  height: 622px;
   margin: auto;
 }
 
 .hero__textcol {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  -ms-flex-preferred-size: 160px;
-      flex-basis: 160px;
-  width: 50%;
   margin-right: -10%;
-  background-image: url("images/pattern-quotes.svg");
-  background-position: top;
-  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +58,12 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 10;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  z-index: 1;
   padding: 60px;
 }
 
@@ -76,10 +76,9 @@ img {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  -ms-flex-preferred-size: 200px;
-      flex-basis: 200px;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   width: 50%;
-  background-image: url("images/pattern-bg.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -92,9 +91,14 @@ img {
           align-items: center;
 }
 
-.hero__image img {
+.hero__image {
   height: auto;
-  width: 400px;
+  width: 489px;
+}
+
+.hero__image img {
+  -webkit-box-shadow: 20px 20px 20px rgba(158, 158, 207, 0.4);
+          box-shadow: 20px 20px 20px rgba(158, 158, 207, 0.4);
 }
 
 .hero__name {
@@ -105,19 +109,35 @@ img {
   font-weight: normal;
 }
 
-.hero__nav {
-  z-index: 20px;
-  background-color: #ff0000;
+.hero__background {
+  position: absolute;
+  height: 100%;
+  background-image: url("images/pattern-quotes.svg"), url("images/pattern-bg.svg"), url("images/pattern-curve.svg");
+  background-position: 207px 145px, 90% center, bottom left;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #customize-controls {
   list-style-type: none;
   position: absolute;
-  bottom: 14px;
-  right: 316px;
+  bottom: 58px;
+  right: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 100;
+}
+
+#customize-controls:focus {
+  outline: none;
+}
+
+#customize-controls li:hover {
+  cursor: pointer;
 }
 
 #customize-controls li {

@@ -16,6 +16,7 @@ img {
 .hero {
     height: 100%;
     width: 100%;
+    max-width: 1440px;
     padding: 0;
     margin: 25px auto;
     position: relative;
@@ -26,6 +27,8 @@ img {
     &__slider {
         // height: 35rem;
         // width: 100%;
+        // z-index: 2;
+        overflow: hidden;
     }
     &__item {
         // background-color: #ccc;
@@ -33,8 +36,9 @@ img {
         // flex-direction: row;
         // justify-content: center;
         // align-items: center;
-        height: 35rem;
+        // height: 35rem;
         // font-size: 1.2em;
+        // z-index: 103;
         color: var(--dark-blue);
     }
     &__innerwrap {
@@ -43,22 +47,23 @@ img {
         padding: 25px 50px;
         //added 7/1
         max-width: 1440px;
-        height: 800px;
+        height: 622px;
         margin: auto;
     }
     &__textcol {
-        flex-grow: 1;
-        flex-basis: 160px;
         // height: 60%;
-        width: 50%;
+        // width: 50%;
         margin-right: -10%;
-        background-image: url("images/pattern-quotes.svg");
-        background-position: top;
-        background-repeat: no-repeat;
+        // background-image: url("images/pattern-quotes.svg");
+        // background-position: 160px 209px;
+        // background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        z-index: 10;
+        flex-grow: 1;
+        // flex-basis: 160px;
+        flex-basis: 50%;
+        z-index: 1;
         padding: 60px;
     }
     &__quote {
@@ -67,9 +72,10 @@ img {
     }
     &__image-container {
         flex-grow: 1;
-        flex-basis: 200px;
+        // flex-basis: 200px;
+        flex-basis: 50%;
         width: 50%;
-        background-image: url("images/pattern-bg.svg");
+        // background-image: url("images/pattern-bg.svg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -77,9 +83,12 @@ img {
         display: flex;
         align-items: center;
     }
-    &__image img {
+    &__image {
         height: auto;
-        width: 400px;
+        width: 489px;
+        img {
+            box-shadow: 20px 20px 20px rgba(158, 158, 207, 0.4);
+        }
     }
     &__name {
         font-weight: 700;
@@ -87,34 +96,52 @@ img {
     &__profession {
         font-weight: normal;
     }
-    &__nav{
-        z-index: 20px;
-        background-color: #ff0000;
+    &__background {
+        position: absolute;
+        height: 100%;
+        background-image: url("images/pattern-quotes.svg"), url("images/pattern-bg.svg"),
+            url("images/pattern-curve.svg");
+        background-position: 207px 145px, 90% center, bottom left;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
     }
 }
 #customize-controls {
     list-style-type: none;
     position: absolute;
-    bottom: 14px;
-    right: 316px;
-    display:flex;
+    bottom: 58px;
+    right: 40%;
+    display: flex;
+    z-index: 100;
+    &:focus {
+        outline: none;
+    }
+
+    li:hover {
+        cursor: pointer;
+    }
     li {
         color: var(--grayish-blue);
         font-size: 0.4rem;
         background-color: #fff;
-        
+        // z-index: 100;
     }
-    li.prev{
-        padding-right:10px;
+    li.prev {
+        padding-right: 10px;
         border-top-left-radius: 15px;
         border-bottom-left-radius: 15px;
         padding-left: 5px;
+        // z-index: 100;
     }
-    li.next{
-        padding-left:10px;
+    li.next {
+        padding-left: 10px;
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
         padding-right: 5px;
+        // z-index: 100;
     }
 }
 
